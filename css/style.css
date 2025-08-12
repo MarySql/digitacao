@@ -1,0 +1,174 @@
+/* --- ESTILOS GERAIS DO TEMA CLARO (ROXO) --- */
+body {
+    background-color: #fff8e0;
+    color: #212529;
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+/* NOVO: Estilos para o cabeçalho no tema claro */
+header {
+    background-color: #f1dff89d; /* Fundo branco para criar um card */
+    padding: 1.5rem; /* Espaçamento interno para o conteúdo "respirar" */
+    border-radius: 0.75rem; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave para dar profundidade */
+    transition: background-color 0.3s; /* Transição suave na troca de tema */
+}
+
+.form-check-input:checked {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-primary {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-primary:hover {
+    background-color: #59359a;
+    border-color: #59359a;
+}
+
+.nav-tabs .nav-link {
+    color: #6f42c1;
+}
+
+.nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: #f1dff89d;
+    border-color: #dee2e6 #dee2e6 #fff;
+    border-top: 3px solid #6f42c1;
+}
+
+.card {
+    background-color: #fff;
+}
+
+#texto-referencia {
+    background-color: #f8f9fa; /* bg-light do Bootstrap */
+    border: 1px solid #dee2e6;
+}
+
+/* --- ESTILOS DA APLICAÇÃO (ORIGINAIS) --- */
+#texto-referencia, #area-digitacao {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+}
+
+#texto-referencia {
+    line-height: 1.6;
+    user-select: none;
+}
+
+.correto {
+    color: #198754;
+    font-weight: bold;
+}
+
+.incorreto {
+    color: #dc3545;
+    text-decoration: underline;
+    background-color: #f8d7da;
+}
+
+.bi-keyboard-fill {
+    margin-right: 8px;
+}
+
+/* --- ESTILO PARA A LOGO NO HEADER --- */
+#logo {
+    height: 100px;
+    width: auto;
+}
+
+
+/* --- ESTILOS DO MODO ESCURO (DARK MODE) --- */
+/* Estas regras só serão aplicadas quando o body tiver a classe .dark-mode */
+
+.dark-mode {
+    background-color: #1c1c27;
+    color: #e2e2e2;
+}
+
+/* NOVO: Estilos para o cabeçalho no tema escuro */
+.dark-mode header {
+    background-color: #2a2a3e; /* Tom mais escuro, o mesmo dos cards para consistência */
+    box-shadow: none; /* Não precisamos de sombra no modo escuro */
+}
+
+.dark-mode h5 {
+    color: #e9e9e9;
+}
+
+.dark-mode .lead, .dark-mode .form-check-label {
+    color: #c0c0c0;
+}
+
+.dark-mode .form-check-input:checked {
+    background-color: #9d4edd;
+    border-color: #9d4edd;
+}
+
+.dark-mode .btn-primary {
+    background-color: #9d4edd;
+    border-color: #9d4edd;
+}
+
+.dark-mode .btn-primary:hover {
+    background-color: #b165f9;
+    border-color: #b165f9;
+}
+
+.dark-mode .card,
+.dark-mode .nav-tabs .nav-link.active {
+    background-color: #2a2a3e;
+    border-color: #444;
+}
+
+.dark-mode .card-body, .dark-mode .card-header {
+    color: #f0f0f0;
+}
+
+.dark-mode .nav-tabs {
+    border-bottom-color: #444;
+}
+
+.dark-mode .nav-tabs .nav-link {
+    color: #9d4edd;
+    border-color: transparent;
+}
+
+.dark-mode .nav-tabs .nav-link.active {
+    color: #fff;
+    border-color: #444 #444 #2a2a3e;
+    border-top: 3px solid #9d4edd;
+}
+
+/* --- SEÇÃO MODIFICADA PARA MELHORAR A LEGIBILIDADE --- */
+
+.dark-mode #texto-referencia {
+    background-color: #2a2a3e;
+    border-color: #444;
+    color: #c1c1c1;
+}
+
+.dark-mode #area-digitacao {
+    background-color: #333;
+    color: #f0f0f0;
+    border-color: #444;
+}
+
+.dark-mode #area-digitacao::placeholder {
+    color: #8d8d8d;
+}
+
+.dark-mode .correto {
+    color: #2ecc71; 
+    font-weight: bold;
+}
+
+.dark-mode .incorreto {
+    color: #ff7675; 
+    background-color: #572d32;
+    text-decoration: underline;
+}

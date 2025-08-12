@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mestre da Digitação</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container mt-4 position-relative">
+        
+        <div class="form-check form-switch position-absolute top-1 end-0 mt-2 me-4">
+            <input class="form-check-input" type="checkbox" role="switch" id="themeSwitch">
+            <label class="form-check-label" for="themeSwitch">Modo Escuro</label>
+        </div>
+
+        <header class="mb-4">
+            <div class="d-flex flex-column align-items-center">
+
+                <img src="img/logo.png" alt="Logo Mestre da Digitação" id="logo">
+
+                <div class="text-center mt-2">
+                    <p class="lead mb-0">Aprenda a digitar de forma rápida e precisa.</p>
+                    <small class="blockquote-footer">Desenvolvido por Maryane Soares graduanda de Ciência da Computação & Software Developer<br>Mestre da Digitação v1.0.0 - Licença livre</small>
+                </div>
+                
+            </div>
+        </header>
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="manual-tab" data-bs-toggle="tab" data-bs-target="#manual" type="button" role="tab">Manual do Teclado</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pratica-tab" data-bs-toggle="tab" data-bs-target="#pratica" type="button" role="tab">Prática de Digitação</button>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active p-3" id="manual" role="tabpanel">
+                <h3>Guia Amigável do Teclado</h3>
+                <p class="lead">Pense nestas teclas como "botões de poder". Sozinhas, elas não fazem nada, mas quando combinadas com outras, ativam funções especiais!</p>
+                <hr>
+                <dl class="row gy-3">
+                    <dt class="col-sm-3"><code>Shift</code></dt>
+                    <dd class="col-sm-9">
+                        <p class="mb-1"><strong>Para Letras Maiúsculas:</strong> Segure <code>Shift</code> e pressione uma letra para torná-la maiúscula instantaneamente. Solte para voltar ao normal.</p>
+                        <p class="mb-0"><strong>Para Símbolos Especiais:</strong> Olhe para as teclas de número (<code>1</code>, <code>2</code>, <code>3</code>...). Viu os símbolos em cima deles, como <code>!</code> e <code>@</code>? Segure <code>Shift</code> para digitá-los.</p>
+                    </dd>
+                    <dt class="col-sm-3"><code>Ctrl</code> (Control)</dt>
+                    <dd class="col-sm-9">
+                        <p class="mb-1">É a tecla de "Comandos Rápidos" (atalhos). Ao segurá-la com outra letra, você dá uma ordem direta ao computador.</p>
+                        <p class="mb-0"><strong>Combinações Famosas:</strong><br>
+                            - <code>Ctrl</code> + <code>C</code>: Copia o que estiver selecionado.<br>
+                            - <code>Ctrl</code> + <code>V</code>: Cola o que você copiou.<br>
+                            - <code>Ctrl</code> + <code>Z</code>: Desfaz sua última ação. É o "botão de voltar no tempo" se cometer um erro!
+                        </p>
+                    </dd>
+                    <dt class="col-sm-3"><code>Alt</code></dt>
+                    <dd class="col-sm-9">
+                        <p class="mb-0">A principal "magia" desta tecla no dia a dia é o atalho <code>Alt</code> + <code>Tab</code>. Segure <code>Alt</code> e dê um toque em <code>Tab</code> para ver todas as suas janelas abertas e alternar rapidamente entre elas.</p>
+                    </dd>
+                    <dt class="col-sm-3"><code>AltGr</code></dt>
+                    <dd class="col-sm-9">
+                        <p class="mb-0">Em teclados brasileiros, algumas teclas têm 3 símbolos. A tecla <code>AltGr</code> serve para acessar esse terceiro símbolo, que geralmente fica no canto inferior direito da tecla (como <code>¹</code>, <code>²</code>, <code>³</code>, <code>§</code> ou <code>/</code> na tecla do <code>Q</code>).</p>
+                    </dd>
+                    <dt class="col-sm-3"><code>Caps Lock</code> (Fixa)</dt>
+                    <dd class="col-sm-9">
+                        <p class="mb-0">É como um interruptor para o "modo de grito". Pressione uma vez e TUDO O QUE VOCÊ DIGITAR FICARÁ EM MAIÚSCULAS. Pressione de novo para desligar. Uma luzinha no teclado geralmente acende para avisar que ela está ativa.</p>
+                    </dd>
+                    <dt class="col-sm-3"><code>Tab</code></dt>
+                    <dd class="col-sm-9">
+                        <p class="mb-0">Extremamente útil para preencher formulários (cadastros, login, etc.). Em vez de usar o mouse para clicar no próximo campo, apenas pressione <code>Tab</code> para pular diretamente para ele.</p>
+                    </dd>
+                </dl>
+            </div>
+            <div class="tab-pane fade p-3" id="pratica" role="tabpanel">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h5>Texto a ser digitado:</h5>
+                        <div id="texto-referencia" class="p-3 bg-light rounded shadow-sm mb-3"></div>
+                        <textarea id="area-digitacao" class="form-control" rows="6" placeholder="Comece a digitar aqui..."></textarea>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Estatísticas:</h5>
+                        <div class="card text-center">
+                            <div class="card-header">Seu Desempenho</div>
+                            <div class="card-body">
+                                <p class="card-text">Velocidade: <strong><span id="ppm">0</span> PPM</strong></p>
+                                <p class="card-text">Precisão: <strong><span id="precisao">100</span>%</strong></p>
+                                <p class="card-text">Tempo: <strong><span id="tempo">0</span>s</strong></p>
+                            </div>
+                            <div class="card-footer">
+                                <button id="botao-reiniciar" class="btn btn-primary">Carregar Novo Texto</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
